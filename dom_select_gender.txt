@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1>Masai School Application</h1>
+    <p>Enger your name and gender to apply for masai shool</p>
+    <h2 id="display">Display inter your name and gender here</h2>
+    <hr />
+    <input type="text" id="name" placeholder="Enter your name" />
+
+    <select id="gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      </option>
+    </select>
+    <button id="apply">Apply</button>
+  </body>
+  <script>
+    let inputEl = document.getElementById("name");
+    let selectEl = document.getElementById("gender");
+    let apply = document.getElementById("apply");
+    let heading = document.getElementById("display");
+    apply.addEventListener("click", getInputValue);
+    function getInputValue() {
+      //   console.log(inputEl.value);
+      //   console.log(selectEl.value);
+      heading.innerText =
+        "Input value:-" + inputEl.value +  " SelectEl.value:- " + selectEl.value;
+    }
+  </script>
+</html>
